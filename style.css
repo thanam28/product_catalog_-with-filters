@@ -1,0 +1,130 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* ===== Layout ===== */
+.catalog-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ===== Sidebar Filters ===== */
+.filter-section {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.filter-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 15px;
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.filter-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Product Grid ===== */
+.product-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+.product-info .price {
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .catalog-container {
+    flex-direction: column;
+  }
+
+  .filter-section {
+    width: 100%;
+  }
+}
